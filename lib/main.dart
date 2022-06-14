@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      // debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(title: 'Flutter Appbar'),
     );
   }
 }
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        backgroundColor: const Color.fromARGB(255, 238, 49, 93),
+        backgroundColor: const Color.fromARGB(255, 29, 10, 66),
       ),
       body: const Center(
         child: Text(
@@ -40,7 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 238, 49, 93)),
+              letterSpacing: 5,
+              color: Color.fromARGB(255, 29, 10, 66)),
         ),
       ),
     );

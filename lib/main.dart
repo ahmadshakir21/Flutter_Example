@@ -2,20 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-void main(){
-  test();
+void main() {
   runApp(const MyApp());
 }
 
-void test(){
-  print("task 1");
-  Duration wait3sec = Duration(milliseconds: 1);
-  Future.delayed(wait3sec,(){
-    print('Future delayed executes after 1 seconds ');
-  });
-  print("object");
-  print("task 3");
-}
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -44,16 +34,38 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        backgroundColor: const Color.fromARGB(255, 29, 10, 66),
+        backgroundColor: Colors.indigo,
       ),
-      body: const Center(
-        child: Text(
-          "Flutter Application",
-          style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 29, 10, 66)),
-        ),
+      body: Center(
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Container(
+            margin: const EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              border: Border.all(width: 8),
+              borderRadius:
+                  const BorderRadius.only(topLeft: Radius.circular(108)),
+            ),
+            child: ClipRRect(
+                borderRadius:
+                    const BorderRadius.only(topLeft: Radius.circular(100)),
+                child: Image.network(
+                  "https://standingtech.com/wp-content/uploads/2016/12/kurdishflag-1024x683.png",
+                  fit: BoxFit.fill,
+                )),
+            height: 300,
+            width: 400,
+          ),
+          const SizedBox(height: 50),
+          const Text(
+            "\u{1F349}This is Flag",
+            style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.w500,
+              color: Colors.indigo,
+              fontFamily: "Anton",
+            ),
+          ),
+        ]),
       ),
     );
   }

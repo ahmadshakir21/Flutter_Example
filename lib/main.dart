@@ -1,9 +1,21 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
-void main() {
+void main(){
+  test();
   runApp(const MyApp());
 }
 
+void test(){
+  print("task 1");
+  Duration wait3sec = Duration(milliseconds: 1);
+  Future.delayed(wait3sec,(){
+    print('Future delayed executes after 1 seconds ');
+  });
+  print("object");
+  print("task 3");
+}
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -40,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
-              letterSpacing: 5,
               color: Color.fromARGB(255, 29, 10, 66)),
         ),
       ),
